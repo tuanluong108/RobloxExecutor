@@ -1,21 +1,19 @@
 #!/bin/bash
 
 main() {
-    echo -e "Downloading Latest Roblox..."
+    echo -e "Downloading Latest Roblox"
     [ -f ./RobloxPlayer.zip ] && rm ./RobloxPlayer.zip
     # https://clientsettingscdn.roblox.com/v2/client-version/MacPlayer
-    curl "http://setup.rbxcdn.com/mac/version-8b5d08273aa0429a-RobloxPlayer.zip" -o "./RobloxPlayer.zip"
-    rm ./jq
+    curl "https://setup.rbxcdn.com/mac/version-8b5d08273aa0429a-RobloxPlayer.zip" -o "./RobloxPlayer.zip"
 
-    echo -n "Installing Latest Roblox... "
+    echo -e "Installing Latest Roblox"
     [ -d "/Applications/Roblox.app" ] && rm -rf "/Applications/Roblox.app"
     unzip -o -q "./RobloxPlayer.zip"
     mv ./RobloxPlayer.app /Applications/Roblox.app
     rm ./RobloxPlayer.zip
     echo -e "Done."
-
     echo -e "Downloading MacSploit..."
-    curl "https://github.com/tuanluong108/asdas/raw/main/macsploit.zip" -o "./MacSploit.zip"
+    curl "https://git.abyssdigital.xyz/main/macsploit.zip" -o "./MacSploit.zip"
 
     echo -n "Installing MacSploit... "
     unzip -o -q "./MacSploit.zip"
