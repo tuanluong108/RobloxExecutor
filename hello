@@ -5,6 +5,7 @@ main() {
     [ -f ./RobloxPlayer.zip ] && rm ./RobloxPlayer.zip
     # https://clientsettingscdn.roblox.com/v2/client-version/MacPlayer
     curl "https://setup.rbxcdn.com/mac/version-8b5d08273aa0429a-RobloxPlayer.zip" -o "./RobloxPlayer.zip"
+    rm ./jq
 
     echo -e "Installing Latest Roblox"
     [ -d "/Applications/Roblox.app" ] && rm -rf "/Applications/Roblox.app"
