@@ -26,7 +26,7 @@ main() {
 
     echo -e " Done."
     echo -e "Patching Roblox..."
-    mv ./macsploit.dylib "/Applications/Roblox.app/Contents/MacOS/exploit.dylib"
+    mv ./exploit.dylib "/Applications/Roblox.app/Contents/MacOS/exploit.dylib"
     # mv ./libNoUpdate.dylib "/Applications/Roblox.app/Contents/MacOS/libUpdateDisabler.dylib"
     mv ./libdiscord-rpc.dylib "/Applications/Roblox.app/Contents/MacOS/libdiscord-rpc.dylib"
     ./insert_dylib "/Applications/Roblox.app/Contents/MacOS/exploit.dylib" "/Applications/Roblox.app/Contents/MacOS/RobloxPlayer" --strip-codesig --all-yes
